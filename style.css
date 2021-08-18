@@ -1,0 +1,14 @@
+Body{
+    background-color: black;
+    text-align: center;
+    color: blanchedalmond;
+    font-family: 'Style Script', cursive;
+}
+
+.Gender{
+    background-color: transparent;
+    border: none;
+    font-size: 75px;
+    color: blanchedalmond;
+    font-family: 'Style Script', cursive;
+}
