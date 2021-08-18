@@ -9,6 +9,13 @@ Body{
     background-color: transparent;
     border: none;
     font-size: 75px;
-    color: blanchedalmond;
     font-family: 'Style Script', cursive;
+}
+
+#Male{
+    color: cyan;
+}
+
+#Female{
+    color: deeppink;
 }
