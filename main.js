@@ -1,10 +1,10 @@
-Gender = '';
 var Xs = 0;
 var Ys = 0;
 
 function preload() {
-    Females = 'https://i.postimg.cc/SNq0Qrf7/Female.png';
-    Males = 'https://i.postimg.cc/7ZYp0Zc5/Male.png';
+    Females = loadImage('https://i.postimg.cc/SNq0Qrf7/Female.png');
+    Males = loadImage('https://i.postimg.cc/7ZYp0Zc5/Male.png');
+    Gender = Males;
 }
 
 function setup() {
@@ -19,7 +19,7 @@ function setup() {
 
 function draw() {
     image(Preview, 0, 0, 300, 300);
-    image(Males, Xs, Ys, 70, 40);
+    image(Gender, Xs, Ys, 70, 40);
 }
 
 function Report() {
@@ -28,12 +28,21 @@ function Report() {
 
 function Movenment(Result) {
     if (Result.length > 0) {
+        if(Gender == Males){
         console.log(Result);
-        Xs = Result[0].pose.nose.x;
+        Xs = Result[0].pose.nose.x - 30;
         Ys = Result[0].pose.nose.y;
         console.log("X = " + Xs);
         console.log("Y = " + Ys);
-    }
+        }
+        if(Gender == Females){
+            console.log(Result);
+            Xs = Result[0].pose.nose.x - 30;
+            Ys = Result[0].pose.nose.y+20;
+            console.log("X = " + Xs);
+            console.log("Y = " + Ys);
+            }
+        }
 }
 
 function Male(){
